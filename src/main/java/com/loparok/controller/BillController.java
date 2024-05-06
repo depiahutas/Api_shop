@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/Bill")
 public class BillController {
 
     @Autowired
@@ -23,7 +23,7 @@ public class BillController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Bill> getBill(Long id)throws Exception{
+    public Optional<Bill> getBill(Intetger id)throws Exception{
 
         return BillRepository.findById(id);
     }

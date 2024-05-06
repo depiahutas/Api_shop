@@ -19,14 +19,14 @@ public class FeatureController {
     private FeatureRepository FeatureRepository;
 
     @GetMapping()
-    public List<Feature> getAllModel() throws Exception {
+    public List<Feature> getAllFeature() throws Exception {
 
         List<Feature> entities = FeatureRepository.findAll();
         return entities;
     }
 
     @GetMapping("/{id}")
-    public Optional<Feature> getFeature(Long id)throws Exception{
+    public Optional<Feature> getFeature(Integer id)throws Exception{
 
         return FeatureRepository.findById(id);
     }

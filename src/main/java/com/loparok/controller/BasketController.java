@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/Basket")
 public class BasketController {
 
     @Autowired
@@ -23,7 +23,7 @@ public class BasketController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Basket> getBasket(Long id)throws Exception{
+    public Optional<Basket> getBasket(Integer id)throws Exception{
 
         return BasketRepository.findById(id);
     }

@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/Category")
 public class CategoryController {
 
     @Autowired
@@ -23,7 +23,7 @@ public class CategoryController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Category> getCategory(Long id)throws Exception{
+    public Optional<Category> getCategory(Integer id)throws Exception{
 
         return CategoryRepository.findById(id);
     }

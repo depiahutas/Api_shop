@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/Customer")
 public class CustomerController {
 
     @Autowired
@@ -23,7 +23,7 @@ public class CustomerController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Customer> getCustomer(Long id)throws Exception{
+    public Optional<Customer> getCustomer(Integer id)throws Exception{
 
         return CustomerRepository.findById(id);
     }
