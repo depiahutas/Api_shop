@@ -15,7 +15,7 @@ public class Customer_have_discount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private int id;
 
     @ManyToOne
     private Customer id_customer;

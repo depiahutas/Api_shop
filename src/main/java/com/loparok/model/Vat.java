@@ -14,7 +14,7 @@ import lombok.Setter;
 public class Vat {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private Long id;
+private int id;
 
 private int rate;
 

@@ -1,6 +1,6 @@
 package com.loparok.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +16,7 @@ import lombok.Setter;
 public class Order_as {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private Long id;
+private int id;
 
 @ManyToOne
 private Basket id_basket;

@@ -15,7 +15,7 @@ public class Media {
 
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private Long id;
+private int id;
 
 @ManyToOne
 private Product id_product_as;

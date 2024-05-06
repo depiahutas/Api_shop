@@ -16,7 +16,7 @@ public class Line_bill {
 
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private Long id;
+private int id;
 
 @ManyToOne
 private Bill id_bill;
