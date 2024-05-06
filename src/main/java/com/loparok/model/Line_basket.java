@@ -15,7 +15,7 @@ public class Line_basket {
 
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private Long id;
+private int id;
 
 @ManyToOne
 private Basket id_basket;

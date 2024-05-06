@@ -14,7 +14,7 @@ public class Feature {
 
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private Long id;
+private int id;
 
 private int weight;
 

@@ -15,7 +15,7 @@ public class Enterprise_have_products {
 
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private Long id;
+private int id;
 
 @ManyToOne
 private Enterprise id_enterprise;
