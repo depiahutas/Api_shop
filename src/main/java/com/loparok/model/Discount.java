@@ -1,5 +1,7 @@
 package com.loparok.model;
 
+import java.sql.Date;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

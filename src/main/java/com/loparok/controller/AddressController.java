@@ -2,10 +2,10 @@ package com.loparok.controller;
 
 import com.loparok.model.Address;
 import com.loparok.repository.AddressRepository;
-import com.loparok.service.AdressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
 import java.util.List;
 
 @RestController
@@ -27,3 +27,4 @@ public class AddressController {
 
         return AddressRepository.findById(id);
     }
+}

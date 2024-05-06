@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,10 +19,10 @@ public class Customer_have_address {
     private Long id;
 
     @ManyToOne
-    private Long id_address;
+    private Address id_address;
 
     @ManyToOne
-    private Long id_customer;
+    private Customer id_customer;
 
     private Long facturation;
 

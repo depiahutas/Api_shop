@@ -1,10 +1,13 @@
 package com.loparok.model;
 
+import java.sql.Date;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,7 +21,7 @@ public class Delivery {
     private Long id;
 
     @ManyToOne
-    private Long id_order;
+    private Order_as id_order;
 
     private Date sending_date;
 
