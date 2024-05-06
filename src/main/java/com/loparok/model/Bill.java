@@ -1,41 +1,36 @@
 package com.loparok.model;
 
-<<<<<<< HEAD
-=======
+import java.sql.Date;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
->>>>>>> 15a308a8a3fbe079e1ec844df5b7eb38003bc4fb
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
-public class Enterprise {
+public class Bill {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String logo;
+    @ManyToOne
+    private Order_as order;
 
-    private String social_reason;
+    private String reference;
 
-    private String email;
+    private Date date;
 
-    private String password;
+    private float price_ht ;
 
-    private Long phone;
+    private float price_ttc;
 
-    private String address;
+    private float price_tva;
 
-    private String cin;
-
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 15a308a8a3fbe079e1ec844df5b7eb38003bc4fb
