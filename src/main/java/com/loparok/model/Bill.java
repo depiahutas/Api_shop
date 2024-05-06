@@ -1,5 +1,6 @@
 package com.loparok.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -26,10 +27,10 @@ public class Bill {
 
     private Date date;
 
-    private float price_ht ;
+    private BigDecimal price_ht ;
 
-    private float price_ttc;
+    private BigDecimal price_ttc;
 
-    private float price_tva;
+    private BigDecimal price_tva;
 
 }

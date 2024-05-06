@@ -1,5 +1,6 @@
 package com.loparok.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -28,5 +29,5 @@ private String method;
 
 private Date date;
 
-private float amount;
+private BigDecimal amount;
 }

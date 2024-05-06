@@ -1,5 +1,7 @@
 package com.loparok.model;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,6 +29,6 @@ private int quantity;
 
 private int amount;
 
-private float amount_discount;
+private BigDecimal amount_discount;
 
 }

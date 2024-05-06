@@ -1,5 +1,6 @@
 package com.loparok.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -20,7 +21,7 @@ public class Discount {
 
     private String name;
 
-    private Float percent;
+    private BigDecimal percent;
 
     private Date start_date;
 

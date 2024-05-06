@@ -1,5 +1,7 @@
 package com.loparok.model;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,12 +23,12 @@ private int id;
 @ManyToOne
 private Bill id_bill;
 
-private float amount_discount;
+private BigDecimal amount_discount;
 
-private float amount_tva;
+private BigDecimal amount_tva;
 
 private int quantity;
 
-private float amount_total;
+private BigDecimal amount_total;
 
 }

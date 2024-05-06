@@ -1,5 +1,6 @@
 package com.loparok.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -22,9 +23,9 @@ public class Basket {
     @ManyToOne
     private Customer id_customer;
 
-    private float total;
+    private BigDecimal total;
 
-    private float total_discount;
+    private BigDecimal total_discount;
 
     private Date created_at;
 

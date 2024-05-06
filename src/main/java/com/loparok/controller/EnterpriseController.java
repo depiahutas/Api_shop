@@ -23,7 +23,7 @@ public class EnterpriseController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Enterprise> getEnterprise(Long id)throws Exception{
+    public Optional<Enterprise> getEnterprise(Integer id)throws Exception{
 
         return EnterpriseRepository.findById(id);
     }

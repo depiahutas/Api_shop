@@ -23,7 +23,7 @@ public class Customer_have_address {
     @ManyToOne
     private Customer id_customer;
 
-    private Long facturation;
+    private int facturation;
 
 
 }

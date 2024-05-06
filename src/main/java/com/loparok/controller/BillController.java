@@ -23,7 +23,7 @@ public class BillController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Bill> getBill(Intetger id)throws Exception{
+    public Optional<Bill> getBill(Integer id)throws Exception{
 
         return BillRepository.findById(id);
     }
