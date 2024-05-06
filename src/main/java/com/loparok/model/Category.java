@@ -1,6 +1,5 @@
 package com.loparok.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,7 +22,7 @@ public class Category {
     private String description;
 
     @ManyToOne
-    private Long mother_category;
+    private Category mother_category;
 
 
 }

@@ -1,9 +1,6 @@
 package com.loparok.model;
 
-<<<<<<< HEAD
-=======
 import com.fasterxml.jackson.annotation.JsonProperty;
->>>>>>> 15a308a8a3fbe079e1ec844df5b7eb38003bc4fb
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -33,9 +30,4 @@ public class Enterprise {
     private String address;
 
     private String cin;
-
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 15a308a8a3fbe079e1ec844df5b7eb38003bc4fb
