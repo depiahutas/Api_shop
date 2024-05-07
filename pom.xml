@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.loparok</groupId>
-	<artifactId>partage-recette</artifactId>
+	<artifactId>shop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>partage-recette</name>
-	<description>Partage de recette</description>
+	<name>shop</name>
+	<description>Shop</description>
 	<properties>
 		<java.version>17</java.version>
 		<sonar.organization>lebossais</sonar.organization>

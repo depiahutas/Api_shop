@@ -12,6 +12,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 
+import java.util.Collection;
 import java.util.Collections;
 
 import static org.springframework.security.config.Customizer.withDefaults;
