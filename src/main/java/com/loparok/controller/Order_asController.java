@@ -13,7 +13,7 @@ import com.loparok.model.Order_as;
 import com.loparok.repository.Order_asRepository;
 
 @RestController
-@RequestMapping("/Order_as")
+@RequestMapping("/Order")
 public class Order_asController {
 
     @Autowired

@@ -13,7 +13,7 @@ import com.loparok.model.Product_have_discount;
 import com.loparok.repository.Product_have_discountRepository;
 
 @RestController
-@RequestMapping("/Product_have_discount")
+@RequestMapping("/ProductHaveDiscount")
 public class Product_have_discountController {
 
     @Autowired
