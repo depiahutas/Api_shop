@@ -23,7 +23,7 @@ public class AddressController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Address> getAddress(Integer id)throws Exception{
+    public Optional<Address> getAddress(@PathVariable Integer id)throws Exception{
 
         return AddressRepository.findById(id);
     }

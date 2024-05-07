@@ -23,7 +23,7 @@ public class CategoryController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Category> getCategory(Integer id)throws Exception{
+    public Optional<Category> getCategory(@PathVariable Integer id)throws Exception{
 
         return CategoryRepository.findById(id);
     }

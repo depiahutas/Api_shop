@@ -9,25 +9,25 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.loparok.model.Media;
-import com.loparok.repository.MediaRepository;
+import com.loparok.model.Product;
+import com.loparok.repository.ProductRepository;
 
 @RestController
-@RequestMapping("/Media")
-public class MediaController {
+@RequestMapping("/Product")
+public class ProductController {
 
     @Autowired
-    private MediaRepository Repository;
+    private ProductRepository Repository;
 
     @GetMapping()
-    public List<Media> getAllMedia() throws Exception {
+    public List<Product> getAllProduct() throws Exception {
 
-        List<Media> entities = Repository.findAll();
+        List<Product> entities = Repository.findAll();
         return entities;
     }
 
     @GetMapping("/{id}")
-    public Optional<Media> getMedia(@PathVariable Integer id)throws Exception{
+    public Optional<Product> getProduct(@PathVariable Integer id)throws Exception{
 
         return Repository.findById(id);
     }

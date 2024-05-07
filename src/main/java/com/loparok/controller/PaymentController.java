@@ -9,25 +9,25 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.loparok.model.Media;
-import com.loparok.repository.MediaRepository;
+import com.loparok.model.Payment;
+import com.loparok.repository.PaymentRepository;
 
 @RestController
-@RequestMapping("/Media")
-public class MediaController {
+@RequestMapping("/Payment")
+public class PaymentController {
 
     @Autowired
-    private MediaRepository Repository;
+    private PaymentRepository Repository;
 
     @GetMapping()
-    public List<Media> getAllMedia() throws Exception {
+    public List<Payment> getAllPayment() throws Exception {
 
-        List<Media> entities = Repository.findAll();
+        List<Payment> entities = Repository.findAll();
         return entities;
     }
 
     @GetMapping("/{id}")
-    public Optional<Media> getMedia(@PathVariable Integer id)throws Exception{
+    public Optional<Payment> getPayment(@PathVariable Integer id)throws Exception{
 
         return Repository.findById(id);
     }

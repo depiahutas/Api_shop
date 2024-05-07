@@ -23,7 +23,7 @@ public class BasketController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Basket> getBasket(Integer id)throws Exception{
+    public Optional<Basket> getBasket(@PathVariable Integer id)throws Exception{
 
         return BasketRepository.findById(id);
     }

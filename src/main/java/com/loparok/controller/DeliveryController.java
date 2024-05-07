@@ -23,7 +23,7 @@ public class DeliveryController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Delivery> getDelivery(Integer id)throws Exception{
+    public Optional<Delivery> getDelivery(@PathVariable Integer id)throws Exception{
 
         return DeliveryRepository.findById(id);
     }

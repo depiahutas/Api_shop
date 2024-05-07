@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +29,7 @@ public class LabelController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Label> getLabel(Integer id)throws Exception{
+    public Optional<Label> getLabel(@PathVariable Integer id)throws Exception{
 
         return LabelRepository.findById(id);
     }

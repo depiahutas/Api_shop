@@ -23,7 +23,7 @@ public class CustomerController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Customer> getCustomer(Integer id)throws Exception{
+    public Optional<Customer> getCustomer(@PathVariable Integer id)throws Exception{
 
         return CustomerRepository.findById(id);
     }

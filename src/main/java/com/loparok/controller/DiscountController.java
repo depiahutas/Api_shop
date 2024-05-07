@@ -23,7 +23,7 @@ public class DiscountController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Discount> getDiscount(Integer id)throws Exception{
+    public Optional<Discount> getDiscount(@PathVariable Integer id)throws Exception{
 
         return DiscountRepository.findById(id);
     }
