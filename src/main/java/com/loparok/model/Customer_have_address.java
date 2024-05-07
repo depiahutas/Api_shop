@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,9 +19,11 @@ public class Customer_have_address {
     private int id;
 
     @ManyToOne
+    @JoinColumn(name = "id_address")
     private Address id_address;
 
     @ManyToOne
+    @JoinColumn(name = "id_customer")
     private Customer id_customer;
 
     private int facturation;

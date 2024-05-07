@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,13 +21,14 @@ public class Delivery {
     private int id;
 
     @ManyToOne
+    @JoinColumn(name = "id_order")
     private Order_as id_order;
 
     private Date sending_date;
 
     private String carrier_name;
 
-    private Long tracked_number;
+    private Integer tracked_number;
 
     private String url;
 
