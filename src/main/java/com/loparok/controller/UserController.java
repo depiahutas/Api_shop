@@ -1,20 +1,15 @@
 package com.loparok.controller;
 
 import com.loparok.model.User;
-import com.loparok.repository.UserRepository;
 import com.loparok.service.UserService;
-import com.loparok.service.UserServiceImplementation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 public class UserController {
 
-    @Autowired
-    private UserRepository userRepository;
 
     @Autowired
     private UserService userService;

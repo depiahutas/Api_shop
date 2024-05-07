@@ -12,7 +12,7 @@ import com.loparok.model.Enterprise_have_products;
 import com.loparok.repository.Enterprise_have_procuctsRepository;
 
 @RestController
-@RequestMapping("/Enterprise_have_products")
+@RequestMapping("/EnterpriseHaveProducts")
 public class Enterprise_have_productsController {
 
 @Autowired

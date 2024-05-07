@@ -2,12 +2,11 @@ package com.loparok.controller;
 
 
 import com.loparok.configuration.JwtProvider;
-import com.loparok.model.User;
-import com.loparok.repository.UserRepository;
+import com.loparok.model.Customer;
+import com.loparok.repository.CustomerRepository;
 import com.loparok.request.LoginRequest;
 import com.loparok.response.AuthResponse;
 import com.loparok.service.CustomUserDetailsService;
-import jdk.jshell.spi.ExecutionControl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -25,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     @Autowired
-    private UserRepository userRepository;
+    private CustomerRepository customerRepository;
 
     @Autowired
     private CustomUserDetailsService customUserDetails;
@@ -37,25 +36,23 @@ public class AuthController {
     private PasswordEncoder passwordEncoder;
 
     @PostMapping("/signup")
-    public AuthResponse createUser(@RequestBody User user) throws Exception {
+    public AuthResponse createUser(@RequestBody Customer customer) throws Exception {
 
-        String email = user.getEmail();
-        String password = user.getPassword();
-        String fullname = user.getFullname();
+        String email = customer.getEmail();
+        String password = customer.getPassword();
 
-        User isExistEmail = userRepository.findByEmail(email);
+        Customer isExistEmail = customerRepository.findByEmail(email);
         if(isExistEmail!=null){
             throw new Exception("L'adresse E-mail est déjà utilisé avec un autre compte");
         }
 
-        User createdUser=new User();
-        createdUser.setEmail(email);
-        createdUser.setPassword(passwordEncoder.encode(password));
-        createdUser.setFullname(fullname);
+        Customer createdCustomer=new Customer();
+        createdCustomer.setEmail(email);
+        createdCustomer.setPassword(passwordEncoder.encode(password));
 
-        User savedUser= userRepository.save(createdUser);
+        Customer savedCustomer= customerRepository.save(createdCustomer);
 
-        Authentication authentication = new UsernamePasswordAuthenticationToken(createdUser, savedUser);
+        Authentication authentication = new UsernamePasswordAuthenticationToken(createdCustomer, savedCustomer);
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
