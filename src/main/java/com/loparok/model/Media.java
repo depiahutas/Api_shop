@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +19,7 @@ public class Media {
 private int id;
 
 @ManyToOne
+@JoinColumn(name = "id_product_as")
 private Product id_product_as;
 
 private String name;
