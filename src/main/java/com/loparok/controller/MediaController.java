@@ -32,4 +32,11 @@ public class MediaController {
         return Repository.findById(id);
     }
 
+    @GetMapping("/product={id}")
+    public List<Media> getMediaByProduct(@PathVariable Integer id)throws Exception{
+
+        List<Media> entities = Repository.findByProductId(id);
+        return entities;
+    }
+
 }

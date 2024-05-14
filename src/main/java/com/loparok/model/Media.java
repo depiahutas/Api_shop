@@ -20,7 +20,7 @@ private int id;
 
 @ManyToOne
 @JoinColumn(name = "id_product_as")
-private Product id_product_as;
+private Product product;
 
 private String name;
 
