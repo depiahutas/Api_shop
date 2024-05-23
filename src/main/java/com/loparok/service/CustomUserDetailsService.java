@@ -1,7 +1,9 @@
 package com.loparok.service;
 
 
+import com.loparok.model.Customer;
 import com.loparok.model.User;
+import com.loparok.repository.CustomerRepository;
 import com.loparok.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -17,12 +19,12 @@ import java.util.List;
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private UserRepository userRepository;
+    private CustomerRepository repository;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        User user = userRepository.findByEmail(username);
+        Customer user = repository.findByEmail(username);
 
         if(user==null){
             throw new UsernameNotFoundException("Utilisateur non trouvé avec cette email" + username);
@@ -32,4 +34,6 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), authorities);
     }
+
+
 }

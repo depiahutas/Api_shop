@@ -1,6 +1,6 @@
 package com.loparok.controller;
 
-import com.loparok.model.User;
+import com.loparok.model.Customer;
 import com.loparok.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +13,12 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    
 
-    @GetMapping("/api/users/profile")
-    public User findUserByJwt(@RequestHeader("Authorization")String jwt) throws Exception {
+    @GetMapping("/users/profile")
+    public Customer findUserByJwt(@RequestHeader("Authorization")String jwt) throws Exception {
 
-        User user = userService.findUserByJwt(jwt);
+        Customer user = userService.findCustomerByJwt(jwt);
 
         return user;
 
