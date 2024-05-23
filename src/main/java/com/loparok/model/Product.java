@@ -1,5 +1,7 @@
 package com.loparok.model;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -37,4 +39,6 @@ private Category id_category;
 private String product_name;
 
 private String product_description;
+
+private BigDecimal product_price;
 }
