@@ -7,16 +7,15 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @Entity
-public class Vat {
-@Id
-@GeneratedValue(strategy = GenerationType.AUTO)
-private int id;
+public class Job {
+    
+    @Id
+    @GeneratedValue(strategy =  GenerationType.AUTO)
+    private int id;
 
-private int rate;
+    private String Job_Name;
 
-private String name;
 }

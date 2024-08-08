@@ -2,9 +2,7 @@ package com.loparok.service;
 
 
 import com.loparok.model.Customer;
-import com.loparok.model.User;
 import com.loparok.repository.CustomerRepository;
-import com.loparok.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

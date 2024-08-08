@@ -12,21 +12,20 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Customer_have_address {
-
+public class Component {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "id_address")
-    private Address id_address;
+    @JoinColumn(name="CAT_ID")
+    private Category Cat_Id;
 
-    @ManyToOne
-    @JoinColumn(name = "id_customer")
-    private Customer id_customer;
+    private String Com_Name;
 
-    private int facturation;
+    private int Com_Price;
 
+    private String Com_Img;
 
 }

@@ -18,18 +18,10 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private String first_name;
-
-    private String last_name;
+    private String pseudo;
 
     private String email;
 
     private String password;
-
-    private String phone;
-
-    private Date created_at;
-
-    private Date updated_date;
 
 }

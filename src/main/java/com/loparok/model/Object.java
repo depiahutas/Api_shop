@@ -12,19 +12,21 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Customer_have_discount {
+public class Object {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "id_customer")
-    private Customer id_customer;
+    @JoinColumn(name = "JOB_ID")
+    private Job Job_Id;
 
-    @ManyToOne
-    @JoinColumn(name = "id_discount")
-    private Discount id_discount;
+    private String Obj_Name;
 
+    private int Obj_Base_Price;
 
+    private int Obj_Final_Price;
+
+    
 }
